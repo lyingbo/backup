@@ -62,10 +62,10 @@ fi
 " if($ScpType eq 1);
 
    $code = "
-if [ \$# -le 1 ]; then
-    echo \"\\nUsage: \$0 [param]\\n\";
-    exit 0;
-fi
+import sys
+if len(sys.argv) < 2: 
+    print(\'\\nUsage: \'+sys.argv[0]+\' [param]\')
+    sys.exit()
 " if($ScpType eq 2);
 
 my $cout = $head.$id.$mark."#    Author      : $auth\n";
