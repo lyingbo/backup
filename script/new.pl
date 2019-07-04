@@ -17,6 +17,7 @@ if(@ARGV > 0) {
     $ScpName = $ARGV[0];
     my $list = substr($ARGV[0], length($ARGV[0])-3);
     $ScpType = 1 if(".sh" eq $list);
+    $ScpType = 2 if(".py" eq $list);
 }
 
 open(FILE, ">$ScpName") || die("Can't create the file $ScpName !\n");
@@ -37,6 +38,7 @@ my $CurTime = "$year-";
 
 my $head = "#!/usr/bin/perl -w\n\n# -*- perl -*-\n#\n";
    $head = "#!/bin/bash\n\n# -*- shell -*-\n#\n" if($ScpType eq 1);
+   $head = "#!/usr/bin/python\n\n# -*- python -*-\n#\n" if($ScpType eq 2);
    
 my $id   = "# \$Id: $ScpName  $CurTime \$\n";
 
@@ -58,6 +60,13 @@ if [ \$# -le 1 ]; then
     exit 0;
 fi
 " if($ScpType eq 1);
+
+   $code = "
+if [ \$# -le 1 ]; then
+    echo \"\\nUsage: \$0 [param]\\n\";
+    exit 0;
+fi
+" if($ScpType eq 2);
 
 my $cout = $head.$id.$mark."#    Author      : $auth\n";
     $cout .= "#    Date        : $CurTime\n";
