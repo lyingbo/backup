@@ -1,14 +1,14 @@
 ---
 title: 基于OpenDDS应用程序开发(1)IDL定义
 category: OpenDDS
-date: 2019-08-20
+date: 2014-07-02
 ---
 
 连续的三篇博文演示如何基于OpenDDS开发应用程序，将数据从发布端节点发送到订阅端节点，该示例程序由一个发布者发布数据，一个订阅者订阅数据，使用默认的QoS策略和TCP/IP传输方式。
 
 本文是第一篇，主要介绍IDL的定义及编译。
 
-## IDL定义
+## 1、IDL定义：
 
 DDS中的数据类型需要通过IDL格式定义，OpenDDS使用#pragma关键字定义DDS传输和处理的数据类型。
 这些数据类型再由tao_idl编译器和OpenDDS_idl编译器进行预编译出来，生成用于网络传输这些数据类型的代码。
@@ -33,7 +33,7 @@ IDL文件使用DCPS_DATA_TYPE定义一个结构体数据类型，IDL语法要求
 
 其它类型，如结构体、序列和数组不能直接用来做key，但是当结构体的成员或数组中的元素是数值型、枚举型或者字符串型时可以。
 
-## IDL编译
+## 2、IDL编译：
 
 IDL文件首先需要由tao_idl编译，以生成数据在网络上传输时打包解包的代码，该IDL编译器位于$ACE_ROOT/bin/目录下，运行命令如下：
 ```
@@ -82,7 +82,7 @@ idl工程从父工程dcps继承，父工程dcps中定义了类型支持的编译
 
 编写好mpc文件之后，就可以使用MPC命令来生成C/C++的编译配置文件了，(MPC工具可以生成很多种系统的编译工程，包括Windows的Visual Studio系列，Linux的Makefile等)，这里将Demo.idl文件和Demo.mpc文件放到Demo文件加下，使用如下命令来生成Vs2008的工程：
 ```
-perl   mwc.pl  -type  vc9
+perl mwc.pl -type vc9
 ```
 命令执行完成后，会生成对应的Vs2008工程文件，包括vcproj和sln等，使用Vs2008打开Demo.sln就可以编译前面定义的idl文件，生成DemoC.cpp和DemoTypeSupport.idl等文件了。
 
