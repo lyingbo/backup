@@ -2,6 +2,13 @@
 title: 基于Docker搭建Hadoop集群
 category: Hadoop
 date: 2019-06-14
+comments: true
+tags:
+- Docker
+- Hadoop
+- Cluster
+- NameNode
+- DataNode
 ---
 
 将Hadoop打包到Docker镜像中，就可以快速的在单个机器上搭建Hadoop集群，这样可以方便新手测试和学习。

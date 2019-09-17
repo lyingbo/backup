@@ -2,14 +2,19 @@
 title: OpenDDS环境搭建
 category: OpenDDS
 date: 2014-03-06
+comments: true
+tags:
+- OpenDDS
+- 环境搭建
+- MPC
 ---
 
 以下以Linux系统下的用户DDS为例(关于Windows系统下的搭建过程，跟Linux系统步骤基本一样，请参考文后的评论)，编译OpenDDS源码需要ACE+TAO框架支持，因此需要先编译ACE+TAO的相关库，具体步骤如下：
 
 ## 1、下载ACE和DDS源码：
 
-  ACE源码：http://www.theaceorb.com/downloads
-  DDS源码：http://download.ociweb.com/OpenDDS
+ACE源码：http://www.theaceorb.com/downloads
+DDS源码：http://download.ociweb.com/OpenDDS
 
 ## 2、拷贝源码包到/WorkSpace目录：
 

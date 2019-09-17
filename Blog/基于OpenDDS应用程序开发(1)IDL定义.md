@@ -2,6 +2,13 @@
 title: 基于OpenDDS应用程序开发(1)IDL定义
 category: OpenDDS
 date: 2014-07-02
+comments: true
+tags:
+- OpenDDS
+- 示例开发
+- IDL定义
+- IDL编译
+- MPC
 ---
 
 连续的三篇博文演示如何基于OpenDDS开发应用程序，将数据从发布端节点发送到订阅端节点，该示例程序由一个发布者发布数据，一个订阅者订阅数据，使用默认的QoS策略和TCP/IP传输方式。
@@ -87,3 +94,5 @@ perl mwc.pl -type vc9
 命令执行完成后，会生成对应的Vs2008工程文件，包括vcproj和sln等，使用Vs2008打开Demo.sln就可以编译前面定义的idl文件，生成DemoC.cpp和DemoTypeSupport.idl等文件了。
 
 关于公布端和订阅端应用程序的开发请参见后续博文。
+
+有关OpenDDS的相关问题欢迎发送邮件至lyingbo@aliyun.com一起讨论
