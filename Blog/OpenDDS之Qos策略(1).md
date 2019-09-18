@@ -92,131 +92,131 @@ if (DDS::RETCODE_OK != ret) {
 
 表1、默认域参与者QoS策略
 
-策略|成员|默认值
--|-|-
-USER_DATA|value|(not set)
-ENTITY_FACTORY|autoenable_created_entities|true
+|策略|成员|默认值
+|-|-|-
+|USER_DATA|value|(not set)
+|ENTITY_FACTORY|autoenable_created_entities|true
 
 表2、默认主题QoS策略
 
-策略|成员|默认值
--|-|-
-TOPIC_DATA|value|(not set)
-DURABILITY|kind|VOLATILE_DURABILITY_QOS
-DURABILITY_SERVICE|service_cleanup_delay.sec|DURATION_ZERO_SEC
-DURABILITY_SERVICE|service_cleanup_delay.nanosec|DURATION_ZERO_NSEC
-DURABILITY_SERVICE|history_kind|KEEP_LAST_HISTORY_QOS
-DURABILITY_SERVICE|history_depth|1
-DURABILITY_SERVICE|max_samples|LENGTH_UNLIMITED
-DURABILITY_SERVICE|max_instances|LENGTH_UNLIMITED
-DURABILITY_SERVICE|max_samples_per_instance|LENGTH_UNLIMITED
-DEADLINE|period.sec|DURATION_INFINITY_SEC
-DEADLINE|period.nanosec|DURATION_INFINITY_NSEC
-LATENCY_BUDGET|duration.sec|DURATION_ZERO_SEC
-LATENCY_BUDGET|duration.nanosec|DURATION_ZERO_NSEC
-LIVELINESS|kind|AUTOMATIC_LIVELINESS_QOS
-LIVELINESS|lease_duration.sec|DURATION_INFINITY_SEC
-LIVELINESS|lease_duration.nanosec|DURATION_INFINITY_NSEC
-RELIABILITY|kind|BEST_EFFORT_RELIABILITY_QOS
-RELIABILITY|max_blocking_time.sec|DURATION_INFINITY_SEC
-RELIABILITY|max_blocking_time.nanosec|DURATION_INFINITY_NSEC
-DESTINATION_ORDER|kind|BY_RECEPTION_TIMESTAMP_DESTINATIONORDER_QOS
-HISTORY|kind|KEEP_LAST_HISTORY_QOS
-HISTORY|depth|1
-RESOURCE_LIMITS|max_samples|LENGTH_UNLIMITED
-RESOURCE_LIMITS|max_instances|LENGTH_UNLIMITED
-RESOURCE_LIMITS|max_samples_per_instance|LENGTH_UNLIMITED
-TRANSPORT_PRIORITY|value|0
-LIFESPAN|duration.sec|DURATION_INFINITY_SEC
-LIFESPAN|duration.nanosec|DURATION_INFINITY_NSEC
-OWNERSHIP|kind|SHARED_OWNERSHIP_QOS
+|策略|成员|默认值
+|-|-|-
+|TOPIC_DATA|value|(not set)
+|DURABILITY|kind|VOLATILE_DURABILITY_QOS
+|DURABILITY_SERVICE|service_cleanup_delay.sec|DURATION_ZERO_SEC
+||service_cleanup_delay.nanosec|DURATION_ZERO_NSEC
+||history_kind|KEEP_LAST_HISTORY_QOS
+||history_depth|1
+||max_samples|LENGTH_UNLIMITED
+||max_instances|LENGTH_UNLIMITED
+||max_samples_per_instance|LENGTH_UNLIMITED
+|DEADLINE|period.sec|DURATION_INFINITY_SEC
+||period.nanosec|DURATION_INFINITY_NSEC
+|LATENCY_BUDGET|duration.sec|DURATION_ZERO_SEC
+||duration.nanosec|DURATION_ZERO_NSEC
+|LIVELINESS|kind|AUTOMATIC_LIVELINESS_QOS
+||lease_duration.sec|DURATION_INFINITY_SEC
+||lease_duration.nanosec|DURATION_INFINITY_NSEC
+|RELIABILITY|kind|BEST_EFFORT_RELIABILITY_QOS
+||max_blocking_time.sec|DURATION_INFINITY_SEC
+||max_blocking_time.nanosec|DURATION_INFINITY_NSEC
+|DESTINATION_ORDER|kind|BY_RECEPTION_TIMESTAMP_DESTINATIONORDER_QOS
+|HISTORY|kind|KEEP_LAST_HISTORY_QOS
+||depth|1
+|RESOURCE_LIMITS|max_samples|LENGTH_UNLIMITED
+||max_instances|LENGTH_UNLIMITED
+||max_samples_per_instance|LENGTH_UNLIMITED
+|TRANSPORT_PRIORITY|value|0
+|LIFESPAN|duration.sec|DURATION_INFINITY_SEC
+||duration.nanosec|DURATION_INFINITY_NSEC
+|OWNERSHIP|kind|SHARED_OWNERSHIP_QOS
 
 表3、默认发布者QoS策略
 
-策略|成员|默认值
--|:-:|-:
-PRESENTATION|access_scope|INSTANCE_PRESENTATION_QOS
-PRESENTATION|coherent_access|0
-PRESENTATION|ordered_access|0
-PARTITION|name|(empty sequence)
-GROUP_DATA|value|(not set)
-ENTITY_FACTORY|autoenable_created_entities|true
+|策略|成员|默认值
+|-|-|-
+|PRESENTATION|access_scope|INSTANCE_PRESENTATION_QOS
+||coherent_access|0
+||ordered_access|0
+|PARTITION|name|(empty sequence)
+|GROUP_DATA|value|(not set)
+|ENTITY_FACTORY|autoenable_created_entities|true
 
 表4、默认订阅者QoS策略
 
-策略|成员|默认值
--|-|-
-PRESENTATION|access_scope|INSTANCE_PRESENTATION_QOS
-PRESENTATION|coherent_access|0
-PRESENTATION|ordered_access|0
-PARTITION|name|(empty sequence)
-GROUP_DATA|value|(not set)
-ENTITY_FACTORY|autoenable_created_entities|true
+|策略|成员|默认值
+|-|-|-
+|PRESENTATION|access_scope|INSTANCE_PRESENTATION_QOS
+||coherent_access|0
+||ordered_access|0
+|PARTITION|name|(empty sequence)
+|GROUP_DATA|value|(not set)
+|ENTITY_FACTORY|autoenable_created_entities|true
 
 表5、默认数据写者QoS策略
 
-策略|成员|默认值
--|-|-
-DESTINATION_ORDER|kind|BY_RECEPTION_TIMESTAMP_DESTINATIONORDER_QOS
-HISTORY|kind|KEEP_LAST_HISTORY_QOS
-HISTORY|depth|1
-RESOURCE_LIMITS|max_samples|LENGTH_UNLIMITED
-RESOURCE_LIMITS|max_instances|LENGTH_UNLIMITED
-RESOURCE_LIMITS|max_samples_per_instance|LENGTH_UNLIMITED
-TRANSPORT_PRIORITY|value|0
-LIFESPAN|duration.sec|DURATION_INFINITY_SEC
-LIFESPAN|duration.nanosec|DURATION_INFINITY_NSEC
-USER_DATA|value|(not set)
-OWNERSHIP|kind|SHARED_OWNERSHIP_QOS
-OWNERSHIP_STRENGTH|value|0
-WRITER_DATA_LIFECYCLE|autodispose_unregistered_instances|1
-DURABILITY|kind|VOLATILE_DURABILITY_QOS
-DURABILITY_SERVICE|service_cleanup_delay.sec|DURATION_ZERO_SEC
-DURABILITY_SERVICE|service_cleanup_delay.nanosec|DURATION_ZERO_NSEC
-DURABILITY_SERVICE|history_kind|KEEP_LAST_HISTORY_QOS
-DURABILITY_SERVICE|history_depth|1
-DURABILITY_SERVICE|max_samples|LENGTH_UNLIMITED
-DURABILITY_SERVICE|max_instances|LENGTH_UNLIMITED
-DURABILITY_SERVICE|max_samples_per_instance|LENGTH_UNLIMITED
-DEADLINE|period.sec|DURATION_INFINITY_SEC
-DEADLINE|period.nanosec|DURATION_INFINITY_NSEC
-LATENCY_BUDGET|duration.sec|DURATION_ZERO_SEC
-LATENCY_BUDGET|duration.nanosec|DURATION_ZERO_NSEC
-LIVELINESS|kind|AUTOMATIC_LIVELINESS_QOS
-LIVELINESS|lease_duration.sec|DURATION_INFINITY_SEC
-LIVELINESS|lease_duration.nanosec|DURATION_INFINITY_NSEC
-RELIABILITY|kind|RELIABLE_RELIABILITY_QOS
-RELIABILITY|max_blocking_time.sec|0
-RELIABILITY|max_blocking_time.nanosec|100000000 (100 ms)
+|策略|成员|默认值
+|-|-|-
+|DESTINATION_ORDER|kind|BY_RECEPTION_TIMESTAMP_DESTINATIONORDER_QOS
+|HISTORY|kind|KEEP_LAST_HISTORY_QOS
+||depth|1
+|RESOURCE_LIMITS|max_samples|LENGTH_UNLIMITED
+||max_instances|LENGTH_UNLIMITED
+||max_samples_per_instance|LENGTH_UNLIMITED
+|TRANSPORT_PRIORITY|value|0
+|LIFESPAN|duration.sec|DURATION_INFINITY_SEC
+||duration.nanosec|DURATION_INFINITY_NSEC
+|USER_DATA|value|(not set)
+|OWNERSHIP|kind|SHARED_OWNERSHIP_QOS
+|OWNERSHIP_STRENGTH|value|0
+|WRITER_DATA_LIFECYCLE|autodispose_unregistered_instances|1
+|DURABILITY|kind|VOLATILE_DURABILITY_QOS
+|DURABILITY_SERVICE|service_cleanup_delay.sec|DURATION_ZERO_SEC
+||service_cleanup_delay.nanosec|DURATION_ZERO_NSEC
+||history_kind|KEEP_LAST_HISTORY_QOS
+||history_depth|1
+||max_samples|LENGTH_UNLIMITED
+||max_instances|LENGTH_UNLIMITED
+||max_samples_per_instance|LENGTH_UNLIMITED
+|DEADLINE|period.sec|DURATION_INFINITY_SEC
+||period.nanosec|DURATION_INFINITY_NSEC
+|LATENCY_BUDGET|duration.sec|DURATION_ZERO_SEC
+||duration.nanosec|DURATION_ZERO_NSEC
+|LIVELINESS|kind|AUTOMATIC_LIVELINESS_QOS
+||lease_duration.sec|DURATION_INFINITY_SEC
+||lease_duration.nanosec|DURATION_INFINITY_NSEC
+|RELIABILITY|kind|RELIABLE_RELIABILITY_QOS
+||max_blocking_time.sec|0
+||max_blocking_time.nanosec|100000000 (100 ms)
 
 表6、默认数据读者QoS策略
 
-策略|成员|默认值
--|-|-
-DURABILITY|kind|VOLATILE_DURABILITY_QOS
-DEADLINE|period.sec|DURATION_INFINITY_SEC
-DEADLINE|period.nanosec|DURATION_INFINITY_NSEC
-LATENCY_BUDGET|duration.sec|DURATION_ZERO_SEC
-LATENCY_BUDGET|duration.nanosec|DURATION_ZERO_NSEC
-LIVELINESS|kind|AUTOMATIC_LIVELINESS_QOS
-LIVELINESS|lease_duration.sec|DURATION_INFINITY_SEC
-LIVELINESS|lease_duration.nanosec|DURATION_INFINITY_NSEC
-RELIABILITY|kind|BEST_EFFORT_RELIABILITY_QOS
-RELIABILITY|max_blocking_time.sec|DURATION_INFINITY_SEC
-RELIABILITY|max_blocking_time.nanosec|DURATION_INFINITY_NSEC
-DESTINATION_ORDER|kind|BY_RECEPTION_TIMESTAMP_DESTINATIONORDER_QOS
-HISTORY|kind|KEEP_LAST_HISTORY_QOS
-HISTORY|depth|1
-RESOURCE_LIMITS|max_samples|LENGTH_UNLIMITED
-RESOURCE_LIMITS|max_instances|LENGTH_UNLIMITED
-RESOURCE_LIMITS|max_samples_per_instance|LENGTH_UNLIMITED
-USER_DATA|value|(not set)
-OWNERSHIP|kind|SHARED_OWNERSHIP_QOS
-TIME_BASED_FILTER|minimum_separation.sec|DURATION_ZERO_SEC
-TIME_BASED_FILTER|minimum_separation.nanosec|DURATION_ZERO_NSEC
-READER_DATA_LIFECYCLE|autopurge_nowriter_samples_delay.sec|DURATION_INFINITY_SEC
-READER_DATA_LIFECYCLE|autopurge_nowriter_samples_delay.nanosec|DURATION_INFINITY_NSEC
-READER_DATA_LIFECYCLE|autopurge_disposed_samples_delay.sec|DURATION_INFINITY_SEC
-READER_DATA_LIFECYCLE|autopurge_disposed_samples_delay.nanosec|DURATION_INFINITY_NSEC
+|策略|成员|默认值
+|-|-|-
+|DURABILITY|kind|VOLATILE_DURABILITY_QOS
+|DEADLINE|period.sec|DURATION_INFINITY_SEC
+||period.nanosec|DURATION_INFINITY_NSEC
+|LATENCY_BUDGET|duration.sec|DURATION_ZERO_SEC
+||duration.nanosec|DURATION_ZERO_NSEC
+|LIVELINESS|kind|AUTOMATIC_LIVELINESS_QOS
+||lease_duration.sec|DURATION_INFINITY_SEC
+||lease_duration.nanosec|DURATION_INFINITY_NSEC
+|RELIABILITY|kind|BEST_EFFORT_RELIABILITY_QOS
+||max_blocking_time.sec|DURATION_INFINITY_SEC
+||max_blocking_time.nanosec|DURATION_INFINITY_NSEC
+|DESTINATION_ORDER|kind|BY_RECEPTION_TIMESTAMP_DESTINATIONORDER_QOS
+|HISTORY|kind|KEEP_LAST_HISTORY_QOS
+||depth|1
+|RESOURCE_LIMITS|max_samples|LENGTH_UNLIMITED
+||max_instances|LENGTH_UNLIMITED
+||max_samples_per_instance|LENGTH_UNLIMITED
+|USER_DATA|value|(not set)
+|OWNERSHIP|kind|SHARED_OWNERSHIP_QOS
+|TIME_BASED_FILTER|minimum_separation.sec|DURATION_ZERO_SEC
+||minimum_separation.nanosec|DURATION_ZERO_NSEC
+|READER_DATA_LIFECYCLE|autopurge_nowriter_samples_delay.sec|DURATION_INFINITY_SEC
+||autopurge_nowriter_samples_delay.nanosec|DURATION_INFINITY_NSEC
+||autopurge_disposed_samples_delay.sec|DURATION_INFINITY_SEC
+||autopurge_disposed_samples_delay.nanosec|DURATION_INFINITY_NSEC
 
 有关OpenDDS的相关问题欢迎发送邮件至lyingbo@aliyun.com一起讨论
