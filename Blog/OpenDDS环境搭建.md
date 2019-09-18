@@ -20,11 +20,11 @@ DDS源码：http://download.ociweb.com/OpenDDS
 
 切换到root用户，在根目下创建WorkSpace目录，为WorkSpace目录给所有用户添加+w权限(chmod +w)，再切回到原来的DDS用户，将下载的ACE和DDS源码拷贝到WorkSpace目录下并解压，
 ```
-$cp ACE+TAO-2.2a.tar.gz /WorkSpace
-$cp OpenDDS3.5.tar.gz   /WorkSpace
-$cd /WorkSpace
-$tar –xzvf ACE+TAO-6.1.0.tar.gz
-$tar –xzvf OpenDDS3.5.tar.gz
+cp ACE+TAO-2.2a.tar.gz /WorkSpace
+cp OpenDDS3.5.tar.gz   /WorkSpace
+cd /WorkSpace
+tar –xzvf ACE+TAO-6.1.0.tar.gz
+tar –xzvf OpenDDS3.5.tar.gz
 ```
 
 ## 3、配置ACE和DDS环境变量：

@@ -93,14 +93,14 @@ if (DDS::RETCODE_OK != ret) {
 表1、默认域参与者QoS策略
 
 策略|成员|默认值
--|:-:|-:
+-|-|-
 USER_DATA|value|(not set)
 ENTITY_FACTORY|autoenable_created_entities|true
 
 表2、默认主题QoS策略
 
 策略|成员|默认值
--|:-:|-:
+-|-|-
 TOPIC_DATA|value|(not set)
 DURABILITY|kind|VOLATILE_DURABILITY_QOS
 DURABILITY_SERVICE|service_cleanup_delay.sec|DURATION_ZERO_SEC
@@ -145,7 +145,7 @@ ENTITY_FACTORY|autoenable_created_entities|true
 表4、默认订阅者QoS策略
 
 策略|成员|默认值
--|:-:|-:
+-|-|-
 PRESENTATION|access_scope|INSTANCE_PRESENTATION_QOS
 PRESENTATION|coherent_access|0
 PRESENTATION|ordered_access|0
@@ -156,7 +156,7 @@ ENTITY_FACTORY|autoenable_created_entities|true
 表5、默认数据写者QoS策略
 
 策略|成员|默认值
--|:-:|-:
+-|-|-
 DESTINATION_ORDER|kind|BY_RECEPTION_TIMESTAMP_DESTINATIONORDER_QOS
 HISTORY|kind|KEEP_LAST_HISTORY_QOS
 HISTORY|depth|1
@@ -192,7 +192,7 @@ RELIABILITY|max_blocking_time.nanosec|100000000 (100 ms)
 表6、默认数据读者QoS策略
 
 策略|成员|默认值
--|:-:|-:
+-|-|-
 DURABILITY|kind|VOLATILE_DURABILITY_QOS
 DEADLINE|period.sec|DURATION_INFINITY_SEC
 DEADLINE|period.nanosec|DURATION_INFINITY_NSEC
