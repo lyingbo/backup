@@ -233,7 +233,7 @@ dw_qos.reliability.max_blocking_time.nanosec = 0;
 dw_qos.resource_limits.max_samples_per_instance = 100;
 
 DDS::DataWriter_var dw =
-pub->create_datawriter(topic, dw_qos, 0, // No listener
+  pub->create_datawriter(topic, dw_qos, 0, // No listener
                      OpenDDS::DCPS::DEFAULT_STATUS_MASK);
 ```
 上述代码创建了发布端的数据写者，试用了以下几种Qos策略：
