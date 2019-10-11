@@ -203,7 +203,7 @@ void DataReaderListenerImpl::on_data_available(DDS::DataReader_ptr reader) {
 
 修改完以上代码并编译完成，就可以运行订阅端应用程序了，需要先运行DDS的信息仓库，开始中打开一个CMD窗口，执行如下命令：
 ```
-%DDS_ROOT%/bin/DCPSInfoRepo -ORBEndpoint iiop://localhost:12345
+%DDS_ROOT%/bin/DCPSInfoRepo  -ORBListenEndpoints  iiop://localhost:12345
 ```
 再次打开一个CMD窗口，cd到Demo目录下，执行如下命令：
 ```
